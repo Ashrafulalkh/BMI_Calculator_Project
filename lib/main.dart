@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.deepPurple,
         title: const Center(
             child: Text(
-                'BMI Calculator ',
+                'BMI Calculator',
               style: TextStyle(
                 color: Colors.white,
               ),
@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
                   ),
             
                   const SizedBox(
-                    height: 20,
+                    height: 21,
                   ),
             
                   TextField(
@@ -104,7 +104,7 @@ class _HomeState extends State<Home> {
                   ),
             
                   const SizedBox(
-                      height: 20,
+                      height: 21,
                   ),
             
                   TextField(
@@ -117,7 +117,7 @@ class _HomeState extends State<Home> {
                   ),
           
                   const SizedBox(
-                    height: 34,
+                    height: 36,
                   ),
             
                   ElevatedButton(style: ElevatedButton.styleFrom(
