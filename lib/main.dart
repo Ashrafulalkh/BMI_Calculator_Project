@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.deepPurple,
         title: const Center(
             child: Text(
-                'Your BMI ',
+                'BMI Calculator ',
               style: TextStyle(
                 color: Colors.white,
               ),
@@ -70,10 +70,10 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                      'BMI Calculator',
+                      '𝙱𝙼𝙸 𝙼𝚎𝚊𝚜𝚞𝚛𝚖𝚎𝚗𝚝 𝙵𝚘𝚛 𝚈𝚘𝚞',
                     style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
             
