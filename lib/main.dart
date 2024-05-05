@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.all(2),
             child: Container(
           
-              width: MediaQuery.of(context).size.width * 0.7,
+              width: MediaQuery.of(context).size.width * 0.65,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
