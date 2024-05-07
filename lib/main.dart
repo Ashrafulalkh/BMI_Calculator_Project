@@ -274,8 +274,7 @@ class _HomeState extends State<Home> {
                 ),
 
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.80,
-                  height: MediaQuery.of(context).size.width * 0.80,
+                  height: 350,
                   child: SfRadialGauge(
                       axes: <RadialAxis>[
                         RadialAxis(minimum: 15, maximum: 46,
