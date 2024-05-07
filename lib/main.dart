@@ -170,7 +170,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.35,
+                      width: MediaQuery.of(context).size.width * 0.36,
                       child: TextFormField(
                           controller: ageController,
                           decoration: const InputDecoration(
@@ -181,7 +181,7 @@ class _HomeState extends State<Home> {
                         ),
                     ),
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.55,
+                      width: MediaQuery.of(context).size.width * 0.56,
                       child: TextFormField(
                         controller: wtController,
                         decoration: const InputDecoration(
@@ -214,11 +214,11 @@ class _HomeState extends State<Home> {
                     ),
 
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.25,
+                      width: MediaQuery.of(context).size.width * 0.26,
                       child: TextField(
                         controller: inchController,
                         decoration: const InputDecoration(
-                          label: Text('in Inch'),
+                          label: Text('Inch'),
                           prefixIcon: Icon(Icons.height),
                         ),
                         keyboardType: TextInputType.number,
@@ -274,7 +274,7 @@ class _HomeState extends State<Home> {
                 ),
 
                 SizedBox(
-                  height: 350,
+                  height: 360,
                   child: SfRadialGauge(
                       axes: <RadialAxis>[
                         RadialAxis(minimum: 15, maximum: 46,
