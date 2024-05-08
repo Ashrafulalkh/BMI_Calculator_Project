@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
         inputDecorationTheme: InputDecorationTheme(
           prefixIconColor: Colors.deepPurple,
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(22),
+            borderRadius: BorderRadius.circular(20),
             borderSide: const BorderSide(color: Colors.black),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(22),
+            borderRadius: BorderRadius.circular(20),
             borderSide: const BorderSide(color: Colors.black),
           ),
         ),
@@ -73,93 +73,6 @@ class _HomeState extends State<Home> {
 
           ),
 
-      /*body: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: 50,
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Age',
-                      hintText: 'Age',
-                    ),
-                  ),
-                ),
-
-                SizedBox(
-                  width: 50,
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Ht (ft)',
-                      hintText: 'Ht(ft)',
-                    ),
-                  ),
-                ),
-
-                SizedBox(
-                  width: 50,
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Ht (in)',
-                      hintText: 'Ht (in)',
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            const SizedBox(
-              height: 25,
-            ),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(onPressed: () {}, icon: const Icon(Icons.male),),
-                const Text('|',style: TextStyle(fontSize: 24),),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.female),),
-
-                SizedBox(
-                  width: 80,
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Weight',
-                      hintText: 'Weight',
-                    ),
-                  ),
-                ),
-                ElevatedButton(onPressed: () {}, child: const Text('Calculate'),),
-              ],
-            ),
-
-            const SizedBox(
-              height: 10,
-            ),
-
-            SfRadialGauge(
-              axes: <RadialAxis>[
-                RadialAxis(minimum: 0, maximum: 150,
-                    ranges: <GaugeRange>[
-                      GaugeRange(startValue: 0, endValue: 50, color:Colors.green),
-                      GaugeRange(startValue: 50,endValue: 100,color: Colors.orange),
-                      GaugeRange(startValue: 100,endValue: 150,color: Colors.red)],
-                    pointers: <GaugePointer>[
-                      NeedlePointer(value: 90)],
-                    annotations: <GaugeAnnotation>[
-                      GaugeAnnotation(widget: Container(child:
-                      Text('90.0',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold))),
-                          angle: 90, positionFactor: 0.5
-                      )]
-                )]),
-
-          ],
-        ),
-      ), */
-
 
       body: SingleChildScrollView(
           child: Padding(
@@ -170,7 +83,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.36,
+                      width: MediaQuery.of(context).size.width * 0.35,
                       child: TextFormField(
                           controller: ageController,
                           decoration: const InputDecoration(
@@ -202,7 +115,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.66,
+                      width: MediaQuery.of(context).size.width * 0.63,
                       child: TextFormField(
                         controller: ftController,
                         decoration: const InputDecoration(
@@ -214,7 +127,7 @@ class _HomeState extends State<Home> {
                     ),
 
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.26,
+                      width: MediaQuery.of(context).size.width * 0.28,
                       child: TextField(
                         controller: inchController,
                         decoration: const InputDecoration(
@@ -274,7 +187,7 @@ class _HomeState extends State<Home> {
                 ),
 
                 SizedBox(
-                  height: 360,
+                  height: 340,
                   child: SfRadialGauge(
                       axes: <RadialAxis>[
                         RadialAxis(minimum: 15, maximum: 46,
@@ -299,7 +212,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Text('Very Severely Underweight',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) <= 15.9 ? Colors.red : Colors.black,
+                      color: (result?.toDouble() ?? 0) <= 15.99 ? Colors.red : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),),
@@ -318,7 +231,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Text('Severely Underweight',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 16  && (result?.toDouble() ?? 0) <= 16.9? Colors.red : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 16  && (result?.toDouble() ?? 0) <= 16.99? Colors.red : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),),
@@ -327,7 +240,7 @@ class _HomeState extends State<Home> {
 
                      Text('16.0 - 16.9',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 16  && (result?.toDouble() ?? 0) <= 16.9? Colors.red : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 16  && (result?.toDouble() ?? 0) <= 16.99? Colors.red : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),)
@@ -337,7 +250,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Text('Underweight',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 17  && (result?.toDouble() ?? 0) <= 18.4? Colors.red : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 17  && (result?.toDouble() ?? 0) <= 18.49? Colors.red : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),),
@@ -346,7 +259,7 @@ class _HomeState extends State<Home> {
 
                      Text('17.0 - 18.4',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 17  && (result?.toDouble() ?? 0) <= 18.4? Colors.red : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 17  && (result?.toDouble() ?? 0) <= 18.49? Colors.red : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),)
@@ -356,7 +269,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Text('Normal',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 18.5  && (result?.toDouble() ?? 0) <= 24.9? Colors.green : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 18.5  && (result?.toDouble() ?? 0) <= 24.99? Colors.green : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),),
@@ -365,7 +278,7 @@ class _HomeState extends State<Home> {
 
                      Text('18.5 - 24.9',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 18.5  && (result?.toDouble() ?? 0) <= 24.9? Colors.green: Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 18.5  && (result?.toDouble() ?? 0) <= 24.99? Colors.green: Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),)
@@ -375,7 +288,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Text('Overweight',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 25  && (result?.toDouble() ?? 0) <= 29.9? Colors.yellow : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 25  && (result?.toDouble() ?? 0) <= 29.99? Colors.yellow : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),),
@@ -384,7 +297,7 @@ class _HomeState extends State<Home> {
 
                      Text('25.0 - 29.9',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 25  && (result?.toDouble() ?? 0) <= 29.9? Colors.yellow : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 25  && (result?.toDouble() ?? 0) <= 29.99? Colors.yellow : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),)
@@ -394,7 +307,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Text('Obese Class I',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 30  && (result?.toDouble() ?? 0) <= 34.9? Colors.yellow : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 30  && (result?.toDouble() ?? 0) <= 34.99? Colors.yellow : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),),
@@ -403,7 +316,7 @@ class _HomeState extends State<Home> {
 
                      Text('30.0 - 34.9',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 30  && (result?.toDouble() ?? 0) <= 34.9? Colors.yellow : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 30  && (result?.toDouble() ?? 0) <= 34.99? Colors.yellow : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),)
@@ -413,7 +326,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Text('Obese Class II',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 35  && (result?.toDouble() ?? 0) <= 39.9? Colors.orange : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 35  && (result?.toDouble() ?? 0) <= 39.99? Colors.orange : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),),
@@ -422,7 +335,7 @@ class _HomeState extends State<Home> {
 
                      Text('35.0 - 39.9',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 35  && (result?.toDouble() ?? 0) <= 39.9? Colors.orange : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 35  && (result?.toDouble() ?? 0) <= 39.99? Colors.orange : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),)
@@ -432,7 +345,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Text('Obese Class III',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >= 45 ? Colors.orange : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 40 || (result?.toDouble() ?? 0) >= 45 ? Colors.orange : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),),
@@ -441,7 +354,7 @@ class _HomeState extends State<Home> {
 
                      Text('>= 45.0',style: TextStyle(
                       fontSize: 17,
-                      color: (result?.toDouble() ?? 0) >=45 ? Colors.orange : Colors.black,
+                      color: (result?.toDouble() ?? 0) >= 40 || (result?.toDouble() ?? 0) >=45 ? Colors.orange : Colors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.4,
                     ),)
