@@ -76,7 +76,7 @@ class _HomeState extends State<Home> {
 
       body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(17, 25, 17, 17),
+            padding: const EdgeInsets.fromLTRB(16, 25, 16, 16),
             child: Column(
               children: [
                 Row(
